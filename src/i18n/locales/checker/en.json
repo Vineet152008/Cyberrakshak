@@ -1,0 +1,66 @@
+{
+  "checker": {
+    "badge": "Rule-Based Offline Analysis",
+    "title": "Client-Side Message Checker",
+    "subtitle": "Paste a suspicious SMS, WhatsApp text, or email to inspect for common deception cues before you tap, call, or reply.",
+    "privacyNote": "100% Client-Side Inspection: Your text is analyzed strictly inside your web browser. Nothing is sent to any server.",
+    "neverPasteWarningTitle": "Never Paste Sensitive Credentials",
+    "neverPasteWarningBody": "Never paste active bank OTPs, UPI PINs, net-banking passwords, or 16-digit debit/credit card numbers into this tool or any website.",
+    "inputLabel": "Paste Message Text to Inspect",
+    "inputPlaceholder": "Paste suspicious SMS, WhatsApp message, or email here...\nExample: 'Dear customer, your electricity will be disconnected tonight at 9:30 PM. Call officer at 98765-XXXXX to avoid disconnection.'",
+    "charCount": "{{count}} characters",
+    "clearInputButton": "Clear Text",
+    "sampleButtonsTitle": "Or try an authentic fictional sample:",
+    "sampleEn": "Electricity Bill Threat (English)",
+    "sampleHi": "Electricity Bill Threat (Hindi Sample)",
+    "sampleMr": "Power Disconnection Notice (Marathi Sample)",
+    "sampleHinglish": "Electricity Disconnection (Hinglish)",
+    "sampleSafe": "Legitimate Bank Alert (Safe)",
+    "analyzeButton": "Inspect Message",
+    "resultsTitle": "Analysis Results & Detected Cues",
+    "disclaimerNotice": "Guidance Notice: This rule-based check provides educational guidance, not a certified verdict of safety. Cyber fraudsters continuously modify wording, use new numbers, and evade known filters. A message with zero detected cues may still be malicious.",
+    "safeResultTitle": "No Common Red Flags Detected in Rules",
+    "safeResultDesc": "While this message does not trigger common known deception rules, always exercise caution. Never share OTPs, PINs, or install APKs requested by strangers.",
+    "warningResultTitle": "Potential Deception Cues Detected ({{count}})",
+    "warningResultDesc": "This message contains patterns frequently employed in fraudulent communications in India.",
+    "severityCritical": "Critical Risk Cue",
+    "severityHigh": "High Risk Cue",
+    "severityMedium": "Moderate Risk Cue",
+    "categoryUrgency": "Artificial Urgency & Disconnection Threat",
+    "categoryImpersonation": "Authority or Law Enforcement Impersonation",
+    "categoryLinkApk": "Unverified Link or Third-Party APK",
+    "categoryFinancialUpi": "UPI PIN / Lottery / Financial Trap",
+    "categorySecrecy": "Coercive Secrecy Demand",
+    "rules": {
+      "rule_urgency_disconnection": {
+        "title": "Artificial Urgency & Threat of Disconnection",
+        "explanation": "Legitimate utility providers do not send sudden SMS threats to cut off electricity within hours. Utility disconnections require formal legal notices with weeks of advance written warning.",
+        "guidance": "Do not call the mobile number in the message. Check your official electricity bill on your state power board portal or app."
+      },
+      "rule_authority_impersonation": {
+        "title": "Law Enforcement / Police / Telecom Impersonation",
+        "explanation": "Government bodies, police, CBI, and telecom authorities never issue arrest warrants or conduct official investigations over WhatsApp, Skype, or video calls.",
+        "guidance": "Hang up immediately. Legitimate law enforcement will send in-person summons, never video interrogations."
+      },
+      "rule_unverified_link_apk": {
+        "title": "Suspicious Link or Unverified APK File",
+        "explanation": "Fraudsters use shortened links or fake websites ending in unusual domains to install screen-sharing software (AnyDesk, TeamViewer) or malicious Android APKs to steal OTPs.",
+        "guidance": "Never tap unknown links or install APK files sent via WhatsApp or SMS. Install apps only from official app stores."
+      },
+      "rule_upi_pin_trap": {
+        "title": "UPI PIN Deception / Fake Lottery / Collect Request",
+        "explanation": "Entering your UPI PIN ALWAYS debits money from your account. You NEVER need to enter a UPI PIN to receive money or refunds.",
+        "guidance": "Reject any UPI collect request. Never enter your UPI PIN unless you are actively paying for a verified purchase."
+      },
+      "rule_secrecy_demand": {
+        "title": "Coercive Demand for Secrecy",
+        "explanation": "Demanding that you keep the call or situation secret from family, friends, or police is the hallmark of extortion and digital arrest frauds.",
+        "guidance": "Immediately disconnect and confide in a trusted family member or call the 112 emergency helpline if threatened."
+      }
+    },
+    "nextStepsTitle": "Recommended Next Steps",
+    "step1": "Do not tap any links or dial numbers provided in the message.",
+    "step2": "If financial fraud occurred, immediately call the National Cyber Helpline at 1930.",
+    "step3": "Report the suspicious sender number on the official Government of India Chakshu facility (sancharsaathi.gov.in)."
+  }
+}

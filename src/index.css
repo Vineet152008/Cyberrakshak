@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-midnight: #070B14;
+    --bg-surface-primary: #0D1322;
+    --bg-surface-elevated: #131B2E;
+    --bg-surface-hover: #1A243D;
+    
+    --color-gold: #C9A96E;
+    --color-gold-light: #E4D1A8;
+    --color-gold-muted: rgba(201, 169, 110, 0.18);
+    --color-gold-border: rgba(201, 169, 110, 0.28);
+    
+    --color-cyan: #38BDF8;
+    --color-cyan-muted: rgba(56, 189, 248, 0.15);
+    
+    --color-crimson: #F43F5E;
+    --color-emerald: #10B981;
+    --color-amber: #F59E0B;
+    
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    
+    --font-serif: "Cormorant Garamond", "Noto Serif Devanagari", Georgia, serif;
+    --font-sans: "Inter", "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Global pointer spotlight position */
+    --spotlight-x: 50vw;
+    --spotlight-y: 200px;
+    --spotlight-opacity: 0.18;
+  }
+
+  body {
+    background-color: var(--bg-midnight);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Devanagari Typography Rules for Hindi and Marathi (Scoped, no !important) */
+html[lang="hi"], html[lang="mr"],
+:is([lang="hi"], [lang="mr"]) {
+  font-family: var(--font-sans);
+}
+
+:is(html[lang="hi"], html[lang="mr"], [lang="hi"], [lang="mr"]) :is(p, article, li, blockquote, .devanagari-body) {
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.75;
+}
+
+:is(html[lang="hi"], html[lang="mr"], [lang="hi"], [lang="mr"]) :is(h1, h2, h3, h4, h5, h6, .font-display) {
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: "Noto Serif Devanagari", var(--font-serif);
+  line-height: 1.4;
+}
+
+:is(html[lang="hi"], html[lang="mr"], [lang="hi"], [lang="mr"]) :is(button, a, label, input, select, textarea, .text-xs, .text-sm, .font-mono) {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+
+/* Subtle film grain texture overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(201, 169, 110, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Technical hairline grid */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(201, 169, 110, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(201, 169, 110, 0.04) 1px, transparent 1px);
+}
+
+/* Radial spotlight following cursor */
+.spotlight-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    650px circle at var(--spotlight-x) var(--spotlight-y),
+    rgba(201, 169, 110, var(--spotlight-opacity)),
+    rgba(56, 189, 248, 0.03) 40%,
+    transparent 70%
+  );
+  transition: opacity 0.3s ease;
+}
+
+/* Calm Mode & Reduced Motion Unified Reset */
+html.calm-mode, body.calm-mode {
+  --spotlight-opacity: 0;
+}
+
+html.calm-mode *, body.calm-mode * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+html.calm-mode .spotlight-overlay, body.calm-mode .spotlight-overlay {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --spotlight-opacity: 0;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .spotlight-overlay {
+    display: none !important;
+  }
+}
+
+/* Accessibility focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A243D;
+  border-radius: 4px;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #28375C;
+}

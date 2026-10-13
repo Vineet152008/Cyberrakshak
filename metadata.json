@@ -1,0 +1,6 @@
+{
+  "name": "CyberRakshak — Cyber-Fraud Awareness & Citizen Safety",
+  "description": "Interactive cyber-fraud awareness and emergency safety platform for Indian citizens. Learn scam recognition safely with Scam Lab simulations and get instant guided response steps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

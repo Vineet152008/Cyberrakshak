@@ -1,0 +1,108 @@
+{
+  "toolkit": {
+    "pageTitle": "Citizen Safety Toolkit & Guidelines",
+    "pageSubtitle": "Practical checklists, device security configurations, and rapid call triage tools to safeguard your household and elderly family members.",
+    "badge": "Practical Protection Kit",
+    "auditTab": "Family Device Security Audit",
+    "triageTab": "Suspect Call Triage",
+    "pocketGuideTab": "Printable Emergency Card",
+    "auditScore": "Protection Hardening Score",
+    "auditProgress": "{{done}} of {{total}} defenses active",
+    "markDone": "Mark as Verified",
+    "markPending": "Needs Configuration",
+    "howToHeading": "Step-by-step setup guide",
+    "priorityEssential": "Essential Shield",
+    "priorityHigh": "High Priority",
+    "priorityRecommended": "Recommended",
+    "triageTitle": "Suspect Call & Message Diagnostic",
+    "triageSubtitle": "Select the specific situation you are currently experiencing to receive instant tactical guidance.",
+    "triageSelectPrompt": "What is the caller or sender claiming?",
+    "triageVerdictTitle": "Deception Diagnosis",
+    "triageActionTitle": "Immediate Action Required",
+    "pocketGuideTitle": "Pocket Emergency Card (Print or Save)",
+    "pocketGuideDesc": "Keep these verified national helplines and safety protocols accessible for all family members.",
+    "pocketEmergencyNumbers": "Official 24x7 Emergency Helplines",
+    "printCardButton": "Print Pocket Card",
+    "shareCardButton": "Share Safety Guide",
+    "items": {
+      "unknownSources": {
+        "title": "Disable Installation from Unknown Sources",
+        "desc": "Prevents accidental downloads of malware APKs from WhatsApp, SMS, or deceptive browser redirects.",
+        "howTo": "Open Settings > Security > Special App Access > Install Unknown Apps. Ensure all browsers and WhatsApp are set to 'Not Allowed'."
+      },
+      "accessibility": {
+        "title": "Audit Sensitive Accessibility Permissions",
+        "desc": "Malicious apps abuse accessibility services to silently read screen content and two-factor bank OTPs.",
+        "howTo": "Open Settings > Accessibility > Downloaded Apps / Installed Services. Turn OFF any services that are not genuine accessibility tools."
+      },
+      "safeword": {
+        "title": "Establish a Secret Family Safe-Word",
+        "desc": "Defends against AI voice cloning and spoofed emergency distress calls claiming a family member is in police custody.",
+        "howTo": "Choose a memorable word known only to immediate family. If anyone calls claiming an emergency, ask for the safe-word before transferring money."
+      },
+      "upiLimit": {
+        "title": "Set a Conservative Daily UPI Limit",
+        "desc": "Caps maximum exposure if a phone is lost, stolen, or compromised by an unauthorized collect request.",
+        "howTo": "Open your bank's mobile application > UPI Settings > Transaction Limits. Set daily transaction limit to ₹5,000 - ₹10,000 for regular daily use."
+      },
+      "secondaryAccount": {
+        "title": "Segregate Primary Savings & Daily UPI",
+        "desc": "Keep life savings in a bank account without UPI activated. Maintain only minimal working funds in your UPI-linked daily account.",
+        "howTo": "Link a secondary bank account (with ₹2,000 - ₹5,000 balance) to Google Pay/PhonePe/Paytm, protecting primary retirement savings from direct compromise."
+      },
+      "simHygiene": {
+        "title": "Enable SIM Card PIN Protection",
+        "desc": "Prevents fraudsters from swapping your physical SIM card into another phone to steal OTPs if your device is misplaced.",
+        "howTo": "Open Settings > Security > SIM Card Lock > Enable Lock SIM Card. Set a custom 4-digit PIN (different from your birthday)."
+      }
+    },
+    "triage": {
+      "arrest": {
+        "trigger": "Caller claiming to be Police/CBI/Customs on video call demanding money for 'bail' or 'case clearance'",
+        "indicator": "Criminal Deception (Digital Arrest Scam)",
+        "verdict": "100% Extortion Scam. Indian police, CBI, or judges NEVER conduct trials, issue arrest warrants, or accept bail funds via WhatsApp or Skype video calls.",
+        "action": "Disconnect the call immediately. Do NOT transfer any money. Report the phone number to 1930 and Chakshu (sancharsaathi.gov.in)."
+      },
+      "screenshare": {
+        "trigger": "Caller asking you to download AnyDesk, RustDesk, or TeamViewer to 'fix a banking or SIM issue'",
+        "indicator": "Remote Device Hijack Attack",
+        "verdict": "Remote Screen Sharing Trap. Once installed, the scammer watches your screen in real time, recording bank passwords and intercepting SMS OTPs.",
+        "action": "Never install remote control applications upon a caller's request. If already downloaded, immediately disconnect Wi-Fi / Mobile Data and uninstall the app."
+      },
+      "qrpin": {
+        "trigger": "Someone sent a QR code and told you to enter your UPI PIN to 'receive a prize, payment, or refund'",
+        "indicator": "Reverse UPI Collect Fraud",
+        "verdict": "Financial Theft Trap. A UPI PIN is NEVER required to receive money. Entering your PIN always deducts money from your bank account.",
+        "action": "Do not scan the QR code and never type your UPI PIN. Block the sender on your payment application."
+      },
+      "apk": {
+        "trigger": "SMS claiming electricity or SIM will be disconnected tonight unless you call a number or install an APK file",
+        "indicator": "Malicious Trojan APK Trap",
+        "verdict": "Banking Malware Vector. The APK will stealthily read incoming bank OTPs and forward them to offshore servers.",
+        "action": "Delete the message. Verify your electricity bill directly on your official discom portal or dial toll-free 1912."
+      }
+    },
+    "percentHardened": "{{percent}}% Hardened",
+    "call1930Immediately": "Call 1930 Immediately",
+    "reportChakshu": "Report on Chakshu Portal",
+    "copiedNotice": "Safety guide summary copied to clipboard!",
+    "pocketWordmark": "CYBERRAKSHAK CITIZEN SAFETY PROTOCOL",
+    "pocketCardHeading": "Household Cyber-Fraud Emergency Guide",
+    "pocketCardSub": "Keep near telephone or refrigerator for seniors and family members",
+    "pocketCyberFraud": "Cyber Financial Fraud",
+    "pocketPoliceEmergency": "Police Emergency",
+    "pocketElectricityBoard": "Electricity Board",
+    "pocketTollFree": "24x7 Toll Free",
+    "pocketAllStates": "All States",
+    "pocketBillVerification": "Bill Verification",
+    "pocketFourRulesHeading": "Four Non-Negotiable Citizen Defense Rules",
+    "rule1Bold": "Never enter a UPI PIN to receive money.",
+    "rule1Text": "PIN is strictly for debiting your account.",
+    "rule2Bold": "No police officer interrogates on WhatsApp video calls.",
+    "rule2Text": "'Digital arrest' is 100% fake.",
+    "rule3Bold": "Never install APKs or AnyDesk/QuickSupport",
+    "rule3Text": "upon unsolicited caller requests.",
+    "rule4Bold": "If money was debited, call 1930 immediately",
+    "rule4Text": "to freeze beneficiary accounts."
+  }
+}

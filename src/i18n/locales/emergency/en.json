@@ -1,0 +1,181 @@
+{
+  "emergency": {
+    "badge": "Citizen Helpline 1930",
+    "nationalPortal": "National Cyber Crime Reporting Portal",
+    "tapToCall": "Call 1930 Now",
+    "officialUrl": "https://cybercrime.gov.in",
+    "disclaimer": "Independent awareness platform. Not an official government department. In emergencies, contact 1930 or visit cybercrime.gov.in.",
+    "pageTitle": "What To Do Right Now",
+    "pageSubtitle": "Clear, step-by-step guidance if you suspect fraud, a hacked account, or extortion. Take a deep breath — we will walk through what you can do.",
+    "reassurance": "You are not to blame. Scams succeed through deception and psychological manipulation. Taking prompt steps can help limit the damage.",
+    "noRecoveryPromise": "Notice regarding fund recovery: Calling 1930 and reporting promptly can help authorities and banks coordinate to freeze accounts, but no tool, website, or helpline can promise or guarantee that lost funds will be recovered. CyberRakshak does not process reports or hold any authority.",
+    "call1930Button": "Call 1930 (Toll-Free, 24x7)",
+    "call112Button": "112 (Police / Emergency)",
+    "chakshuButton": "Report on Chakshu (sancharsaathi.gov.in)",
+    "calmModeTitle": "Calm Mode",
+    "calmModeDesc": "Removes motion, glows, and animations to keep the screen quiet and easy to read.",
+    "calmModeOn": "Calm Mode is ON",
+    "calmModeOff": "Turn on Calm Mode",
+    "safetyWarningTitle": "Safety and Privacy Rule",
+    "safetyWarningBody": "Never type real OTPs, UPI PINs, bank passwords, or debit/credit card numbers into this checklist, into notes, or on any unverified website. Analysis and checklists run only inside your browser.",
+    "clearDataButton": "Clear Saved Checklist and Notes",
+    "clearDataConfirmPrompt": "Are you sure you want to delete your saved checklist items and notes from this device?",
+    "clearDataConfirmYes": "Yes, Clear Data",
+    "clearDataConfirmCancel": "Cancel",
+    "clearDataSuccess": "Local data cleared from this device.",
+    "sharedDeviceWarning": "Shared device tip: If you are using a shared or public computer, click 'Clear Saved Checklist' before closing this window.",
+    "localMemoryNote": "Stored only in this browser on your device. Never sent to any server.",
+    "opensInNewTab": "(opens in a new tab)",
+    "crossLinkNotice": "Notice a different kind of issue?",
+    "crossLinkToFinancial": "If money was also debited from your account, click here for the Financial Fraud steps.",
+    "crossLinkToAccount": "If your phone, email, or WhatsApp account was taken over, click here for Hacked Account steps.",
+    "flows": {
+      "financial": {
+        "tab": "Financial Fraud (Money Sent)",
+        "title": "If Money Was Debited From Your Account",
+        "subtitle": "Follow these steps in order. Calling quickly helps banks coordinate, though halting a transfer cannot be guaranteed.",
+        "notice": "Act promptly. Quick action gives banks the best opportunity to coordinate and check recipient accounts.",
+        "step1": {
+          "title": "Step 1: Call 1930 Cyber Fraud Helpline",
+          "sub": "National Citizen Helpline (24x7, Toll-Free in India)",
+          "action": "Call 1930 Toll-Free",
+          "instructions": "Call 1930 immediately from your phone. Give the operator: (1) Your bank name, account number or UPI ID, (2) The transaction amount and 12-digit reference number, and (3) The recipient's phone number or UPI handle. The operator registers an alert with the recipient bank.",
+          "caution": "Keep your transaction SMS or payment receipt open while you speak with the operator."
+        },
+        "step2": {
+          "title": "Step 2: Submit a Report at cybercrime.gov.in",
+          "sub": "Official Central Cyber Crime Portal",
+          "action": "Open cybercrime.gov.in",
+          "instructions": "Visit cybercrime.gov.in and click 'Report Financial Fraud'. Fill in the incident details and upload screenshots of the payment receipt. You will receive an official Acknowledgement Number.",
+          "caution": "Helpful tip: You can also call your bank while the portal form is loading or while waiting on hold."
+        },
+        "step3": {
+          "title": "Step 3: Call Your Bank Using the Number on Your Card",
+          "sub": "Look at the back of your debit/credit card or open your official bank app",
+          "instructions": "Contact your bank's official customer service. Ask the representative to: (1) Block your debit or credit card, (2) Freeze net banking access, and (3) Deregister UPI from that account.",
+          "caution": "CRITICAL: Never look up bank customer care numbers on Google search or social media. Scammers post fake helpline numbers to mislead victims. Only dial the phone number printed on the back of your physical card or bank passbook."
+        },
+        "step4": {
+          "title": "Step 4: Save Evidence on Your Device",
+          "sub": "Do not delete SMS messages, payment receipts, or chat logs",
+          "instructions": "Take clear screenshots of the transaction message, UPI receipt, and scammer's chat messages. Note down the 12-digit transaction reference number and exact timestamp.",
+          "caution": "Keep these screenshots saved locally on your phone so you can provide them to your bank or the cyber cell if asked."
+        }
+      },
+      "account": {
+        "tab": "Hacked Account or Phone",
+        "title": "If Your WhatsApp, Email, or Social Account Was Compromised",
+        "subtitle": "Regain control of your digital identity and prevent the attacker from contacting your family.",
+        "notice": "Do not panic. Focus on using a trusted device to change your password and end unauthorized sessions.",
+        "step1": {
+          "title": "Step 1: Change Your Password from a Trusted Device",
+          "sub": "Use a device you know is clean and safe",
+          "instructions": "From a phone or computer you trust, immediately change the password for your primary email, social media, and payment accounts. Choose a long, distinct passphrase.",
+          "caution": "Changing your password first ensures the attacker cannot log back in after you disconnect them."
+        },
+        "step2": {
+          "title": "Step 2: Log Out of All Other Active Sessions",
+          "sub": "In WhatsApp, Email, or Social Media settings",
+          "instructions": "Go to the account security settings (in WhatsApp: Settings -> Linked Devices) and tap 'Log out from all devices'. In Google/Outlook, select 'Sign out of all other web sessions'.",
+          "caution": "This terminates any active web sessions the attacker may currently have open."
+        },
+        "step3": {
+          "title": "Step 3: Turn on Two-Step Verification",
+          "sub": "Add a PIN or authenticator app",
+          "instructions": "Enable two-step verification in the app settings. Set a 6-digit PIN that you do not use anywhere else.",
+          "caution": "Never share your two-step verification PIN or OTP with anyone, even someone claiming to be technical support."
+        },
+        "step4": {
+          "title": "Step 4: Warn Your Family and Friends Promptly",
+          "sub": "Prevent scammers from borrowing money in your name",
+          "instructions": "Call or SMS your family and close contacts: 'My account was briefly compromised. If you receive any message asking for money from me, do not send anything.'",
+          "caution": "Attackers routinely ask friends for urgent UPI payments pretending you are in a medical emergency."
+        }
+      },
+      "extortion": {
+        "tab": "Blackmail or Extortion",
+        "title": "If Someone Is Threatening or Blackmailing You",
+        "subtitle": "Take a breath. You are the victim of a targeted crime; this is not your fault. Support is available.",
+        "notice": "Do not pay any money. Support and legal remedies exist through 1930 and cyber police.",
+        "step1": {
+          "title": "Step 1: Save Evidence Before You Block",
+          "sub": "Take screenshots before deleting or blocking",
+          "instructions": "Capture full screenshots of the chat messages, threats, phone numbers, and payment handles. Save these securely on your phone.",
+          "caution": "Take screenshots first. Once you block or delete the conversation, critical evidence can be lost."
+        },
+        "step2": {
+          "title": "Step 2: Do Not Pay Any Money",
+          "sub": "Paying often leads to more demands",
+          "instructions": "Extortionists rely on panic. If you pay once, they learn that fear works and demand larger amounts. Refusing to pay breaks their cycle. This is not your fault.",
+          "caution": "Never transfer funds, buy gift cards, or send cryptocurrency to blackmailers."
+        },
+        "step3": {
+          "title": "Step 3: Block the Number and Stop Replying",
+          "sub": "Cut off all communication immediately",
+          "instructions": "Do not argue, plead, or respond to threats. Block the caller's number and restrict their profile on social media.",
+          "caution": "Engaging in arguments shows you are anxious and encourages the extortionist to continue."
+        },
+        "step4": {
+          "title": "Step 4: Report to Authorities",
+          "sub": "Official channels based on the situation",
+          "action": "Report at cybercrime.gov.in",
+          "instructions": "If you already sent money, call 1930 immediately. For online blackmail and harassment, file a formal complaint at cybercrime.gov.in. If you or your family are in immediate physical danger, call 112 right away.",
+          "caution": "You can also report the scammer's phone number on the DoT Chakshu portal (sancharsaathi.gov.in)."
+        }
+      }
+    },
+    "checklist": {
+      "heading": "Private Evidence Checklist",
+      "subheading": "Check each item off on your device. Everything stays in your browser.",
+      "utr": {
+        "label": "12-Digit Transaction Reference (UTR Number)",
+        "how": "Found in your bank account statement SMS or inside your UPI payment app receipt (GPay, PhonePe, Paytm, BHIM).",
+        "why": "This is the primary identifier banks and 1930 operators use to locate the payment."
+      },
+      "contact": {
+        "label": "Scammer's Phone Number or UPI ID",
+        "how": "Copy from your phone call history, WhatsApp chat header, or payment app transaction details.",
+        "why": "Helps authorities identify the recipient account handle."
+      },
+      "receipt": {
+        "label": "Screenshot of Payment Confirmation",
+        "how": "Take a full screen capture showing the timestamp, amount, and recipient name.",
+        "why": "Serves as visual verification of the transaction."
+      },
+      "chat": {
+        "label": "Screenshots of Threat, SMS, or Chat Messages",
+        "how": "Capture the full conversation thread before blocking or deleting.",
+        "why": "Documents the deception or intimidation method used."
+      },
+      "ack": {
+        "label": "Acknowledgement Number from cybercrime.gov.in",
+        "how": "Received on screen, via SMS, and email after submitting your complaint on the national portal.",
+        "why": "Required by banks when filing formal dispute paperwork."
+      }
+    },
+    "chakshuHeading": "Report Suspicious Calls & SMS on Chakshu",
+    "chakshuDesc": "You can report fraudulent phone numbers, spoofed SMS headers, or suspicious WhatsApp accounts on the official Government of India Chakshu facility (sancharsaathi.gov.in) to help authorities investigate.",
+    "privateLocalNote": "100% Private (Saved only on this device)",
+    "whereToFindLabel": "Where to find:",
+    "whyItMattersLabel": "Why it matters:",
+    "evidenceNotesLabel": "Notes for speaking with the 1930 operator (Saved only in this browser)",
+    "notesPlaceholder": "Type reference numbers or phone numbers here to keep them in front of you while speaking with the operator...",
+    "neverTypeSensitiveNote": "Never type sensitive PINs, OTPs, or passwords here.",
+    "selectCategoryAria": "Select Incident Category (Use Arrow Keys to Navigate)",
+    "extortionReassuranceTitle": "Important Reassurance: This is not your fault.",
+    "extortionReassuranceBody": "Criminals specialize in manufacturing fear and urgency. Do not blame yourself. Thousands of citizens face these intimidations daily. Help and legal protection are available.",
+    "extortionCall1930": "Call 1930 (If money was already sent)",
+    "extortionCall112": "Call 112 (If in physical danger)",
+    "extortionReportPortal": "Report Threats at cybercrime.gov.in",
+    "reachBankSafelyTitle": "How to Reach Your Bank Safely",
+    "reachBankSafelyBody": "Turn over your ATM/Debit card and dial the customer service phone number printed on the back. If your card is not with you, open your bank’s official mobile app or look at the first page of your physical bank passbook.",
+    "reachBankSafelyWarning": "Never search online search engines for bank customer care numbers.",
+    "crossLinkAccountTitle": "Were your phone, WhatsApp, or passwords also compromised?",
+    "crossLinkAccountBody": "If the scammer took over your social media, phone SIM, or email account, take defensive steps immediately.",
+    "crossLinkAccountButton": "Go to Hacked Account Guide",
+    "crossLinkFinancialTitle": "Did the attacker also transfer money or debit your bank account?",
+    "crossLinkFinancialBody": "If unauthorized financial transactions occurred, alert the 1930 helpline and your bank right away.",
+    "crossLinkFinancialButton": "Go to Financial Fraud Guide",
+    "dotSancharSaathi": "Department of Telecommunications (DoT) Sanchar Saathi"
+  }
+}

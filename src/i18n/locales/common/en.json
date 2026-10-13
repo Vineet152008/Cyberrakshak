@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "scamLab": "Scam Lab",
+    "emergencyAssist": "Emergency Assist",
+    "messageChecker": "Message Checker",
+    "academy": "Cyber Academy",
+    "toolkit": "Safety Toolkit",
+    "calmMode": "Calm Mode",
+    "emergencyCta": "Emergency 1930",
+    "langLabel": "Language / भाषा:",
+    "langEn": "English",
+    "langHi": "हिन्दी",
+    "langMr": "मराठी"
+  },
+  "brand": {
+    "name": "CyberRakshak",
+    "tagline": "Think before you tap."
+  },
+  "footer": {
+    "disclaimerTitle": "Trust & Safety Disclaimer",
+    "disclaimerText": "CyberRakshak is an independent, non-commercial public education initiative built for Indian citizens. All scam simulations and sender details shown are fictional for training purposes. We never ask for your real OTPs, bank credentials, or UPI PINs. If you have lost money to fraud, report immediately to the National Cyber Crime Portal or call 1930.",
+    "links": {
+      "helpline": "1930 Cyber Fraud Helpline",
+      "portal": "cybercrime.gov.in",
+      "rbi": "RBI Sachet Portal",
+      "chakshu": "DoT Sanchar Saathi / Chakshu"
+    },
+    "copyright": "CyberRakshak Awareness Platform"
+  },
+  "resources": {
+    "portal": {
+      "title": "National Cyber Crime Reporting Portal",
+      "desc": "Official Indian Ministry of Home Affairs portal for lodging cyber fraud complaints and financial loss reports."
+    },
+    "chakshu": {
+      "title": "Chakshu (DoT Sanchar Saathi)",
+      "desc": "Official Department of Telecommunications portal to report suspected fraudulent calls, SMS, and WhatsApp communications."
+    },
+    "sachet": {
+      "title": "RBI Sachet Portal",
+      "desc": "Reserve Bank of India portal to verify registered non-banking finance entities and report illegal deposit or lending schemes."
+    },
+    "rbiKea": {
+      "title": "RBI Complaint Management System (CMS)",
+      "desc": "Official portal to escalate unresolved disputes with banks, payment apps, and regulated credit institutions."
+    },
+    "certin": {
+      "title": "Indian Computer Emergency Response Team (CERT-In)",
+      "desc": "National nodal agency for responding to computer security incidents, ransomware, and identity compromises."
+    }
+  },
+  "common": {
+    "loading": "Loading CyberRakshak module...",
+    "skipToMain": "Skip to main content",
+    "errorTitle": "Application Encountered an Issue",
+    "errorDesc": "Your session progress remains saved locally. Refresh to restart the current interactive module.",
+    "errorReload": "Reload CyberRakshak",
+    "emergencyBannerLabel": "National Cyber-Fraud Emergency Assistance",
+    "opensInNewTab": "(opens in a new tab)",
+    "calmModeTitle": "Calm Mode",
+    "calmModeOn": "Calm Mode is ON",
+    "calmModeOff": "Turn on Calm Mode",
+    "calmModeDesc": "Removes motion, glows, and animations to keep the screen quiet and easy to read.",
+    "call1930": "1930 (Toll Free, 24x7)",
+    "call112": "112 (Police / Emergency)"
+  }
+}

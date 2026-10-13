@@ -1,0 +1,380 @@
+{
+  "scamLab": {
+    "meta": {
+      "badge": "Interactive Deconstruction Lab",
+      "title": "Scam Lab: Deconstruct & Defend",
+      "subtitle": "Learn to recognize deception by interacting with realistic simulated messages safely. Practice spotting manipulation cues with the flashlight reveal, test your choices in branching simulations, and measure your instinct with scenario quizzes.",
+      "partialBadge": "Partial (4 of 8 scenarios)",
+      "partialNotice": "Scam Lab is currently in active development. Scenarios 1 to 4 are fully functional; scenarios 5 to 8 are being calibrated with community reports.",
+      "privacyNotice": "Private browser-based simulator. Your answers, revealed flags, and scores stay strictly inside this browser on your device and are never transmitted to any external server.",
+      "tabSpotlight": "Flashlight Reveal",
+      "tabSimulator": "Decision Simulator",
+      "tabQuiz": "Red-Flag Mastery Quiz",
+      "revealAllButton": "Reveal All Red Flags",
+      "hideAllButton": "Interactive Flashlight Mode",
+      "spotlightInstruction": "Tap or hover over parts of the message to uncover hidden psychological hooks and deceptive patterns.",
+      "keyboardInstruction": "Keyboard: Press Tab to navigate between message segments. Press Enter or Space to inspect red flag details.",
+      "foundFlags": "Found {{count}} of {{total}} deception cues",
+      "allFlagsFound": "Great work! You have spotted all deception markers in this scenario.",
+      "selectScenario": "Choose Scenario:",
+      "resetSimulation": "Reset Simulation",
+      "restartQuiz": "Retake Quiz",
+      "scoreLabel": "Your Score",
+      "quizCompletionTitle": "Quiz Completed",
+      "quizCompletionDesc": "You have evaluated all four deception challenges. Review your takeaways below to stay safe.",
+      "keyTakeaway": "Key Takeaway",
+      "safeChoiceLabel": "Safe Action",
+      "riskyChoiceLabel": "Risky Action",
+      "viewRedFlagDetails": "Inspect Red Flag Details",
+      "howToVerifyTitle": "How To Verify Legitimate Communications",
+      "howItWorksTitle": "Why This Deception Works",
+      "announcementRevealed": "Red flag revealed: {{title}}",
+      "announcementRevealAll": "All red flags have been revealed for inspection.",
+      "announcementHideAll": "Switched back to interactive flashlight inspection."
+    },
+    "scenarios": {
+      "electricity_disconnect": {
+        "title": "Electricity Bill & Urgent Power Disconnection Threat",
+        "categoryLabel": "Utility KYC Impersonation",
+        "senderDisplay": "UrjaVidyut Power (Fictional)",
+        "senderSubtitle": "SMS Alert",
+        "timestamp": "Today, 8:15 PM",
+        "segments": {
+          "seg_consumer_greeting": {
+            "text": "Dear Consumer, your electricity power supply will be disconnected tonight at 9:30 PM from the local power sub-station because your previous month bill was not updated."
+          },
+          "seg_threat_deadline": {
+            "text": "Power will be cut in 75 minutes unless verified immediately.",
+            "flagTitle": "Evening Panic Deadline",
+            "flagExplanation": "Scammers deliberately threaten shut-offs after 7 PM when legitimate utility offices and physical payment counters are closed, causing panic so you do not verify.",
+            "flagHowToVerify": "State discoms never disconnect residential power at night without issuing formal printed notices weeks in advance.",
+            "severity": "critical"
+          },
+          "seg_officer_phone": {
+            "text": "Please contact our power officer immediately at 98765-43210.",
+            "flagTitle": "Personal 10-Digit Mobile Number",
+            "flagExplanation": "Legitimate power utilities use centralized helpline numbers (such as 1912), never random personal mobile numbers.",
+            "flagHowToVerify": "Never dial numbers sent in SMS messages. Look up the official customer care number on your physical paper electricity bill.",
+            "severity": "critical"
+          },
+          "seg_fake_bill_link": {
+            "text": "Or update KYC online at https://urjavidyut-bill-update.fictional to avoid immediate blackout.",
+            "flagTitle": "Deceptive Phishing Domain",
+            "flagExplanation": "The link uses an unofficial domain designed to look real, which will download a remote-access app or steal your net banking login.",
+            "flagHowToVerify": "Utility payments should only be made through the state government utility portal or authorized bank applications.",
+            "severity": "high"
+          },
+          "seg_utility_footer": {
+            "text": "Discom Operations Central Command (Automated Alert)"
+          }
+        },
+        "simulation": {
+          "prompt": "You receive this SMS at 8:15 PM while your family is watching TV. What is your immediate next step?",
+          "options": {
+            "opt_call_officer": {
+              "label": "Call the 10-digit number immediately to stop the power cut",
+              "feedbackTitle": "Danger: You are speaking directly with the scammer",
+              "feedbackExplanation": "The person answering will pretend to be an officer and urge you to install an app (like a screen-sharing tool) to 'update the bill', which drains your bank account.",
+              "goldenRule": "Never call phone numbers received in threatening text messages."
+            },
+            "opt_click_link": {
+              "label": "Click the link and pay ₹10 to check if the bill updates",
+              "feedbackTitle": "Danger: Phishing or Remote Access Trojan",
+              "feedbackExplanation": "The page steals debit card details or downloads an APK that reads your OTPs secretly.",
+              "goldenRule": "Never enter banking details or download apps from SMS links."
+            },
+            "opt_verify_utility": {
+              "label": "Open your official electricity provider app or wait till morning to check your account",
+              "feedbackTitle": "Safe: Verifying through primary channels",
+              "feedbackExplanation": "Checking your account balance through your official utility portal or calling 1912 confirms whether any genuine bill is pending.",
+              "goldenRule": "Always verify utility claims through independent, official sources."
+            }
+          }
+        }
+      },
+      "courier_redelivery": {
+        "title": "Parcel Failed Delivery / ₹5 Address Update Scam",
+        "categoryLabel": "Logistics & Courier Impersonation",
+        "senderDisplay": "QuickTrack Logistics (Fictional)",
+        "senderSubtitle": "SMS Notification",
+        "timestamp": "Today, 11:20 AM",
+        "segments": {
+          "seg_courier_greeting": {
+            "text": "Consignment ID QTK-98214 could not be delivered to your address."
+          },
+          "seg_delivery_failed_notice": {
+            "text": "Delivery failed: Recipient house number or street name is missing from shipping label.",
+            "flagTitle": "Vague Consignment Alert",
+            "flagExplanation": "Scammers send millions of these messages knowing that many people are expecting packages from e-commerce sites.",
+            "flagHowToVerify": "Check the orders section in the exact app where you placed your order, rather than trusting an unverified SMS.",
+            "severity": "medium"
+          },
+          "seg_reschedule_deadline": {
+            "text": "Your package will be returned to sender or destroyed within 24 hours.",
+            "flagTitle": "False Urgency & Loss Aversion",
+            "flagExplanation": "Threatening to return or destroy your parcel pressures you to act quickly without thinking.",
+            "flagHowToVerify": "Couriers hold parcels at local hubs for several days and make multiple delivery attempts.",
+            "severity": "high"
+          },
+          "seg_fake_portal_link": {
+            "text": "Update your address & pay ₹5 rescheduling fee at https://quicktrack-redelivery.fictional.",
+            "flagTitle": "The Tiny ₹5 Fee Trap",
+            "flagExplanation": "The nominal ₹5 fee is a psychological trap. You feel safe paying such a small amount, but the fake payment gateway captures your full card number, expiry, and CVV.",
+            "flagHowToVerify": "Legitimate couriers never demand online re-delivery fees via SMS links.",
+            "severity": "critical"
+          },
+          "seg_automated_footer": {
+            "text": "QuickTrack Logistics automated notification service."
+          }
+        },
+        "simulation": {
+          "prompt": "You recently ordered items online and received this SMS. How do you respond?",
+          "options": {
+            "opt_pay_fee_link": {
+              "label": "Click the link and pay ₹5 on the card page to get your parcel",
+              "feedbackTitle": "Danger: Your card credentials are stolen",
+              "feedbackExplanation": "The fake gateway captures your card details. Scammers immediately attempt large fraudulent transactions while prompting you for OTPs.",
+              "goldenRule": "Never pay re-delivery fees via SMS links."
+            },
+            "opt_call_courier_number": {
+              "label": "Call the sender number from the SMS",
+              "feedbackTitle": "Danger: Direct contact with scammers",
+              "feedbackExplanation": "The caller will ask you to install a 'courier helper app' (APK) that forwards SMS messages to their server.",
+              "goldenRule": "Never call unknown phone numbers found in delivery SMS messages."
+            },
+            "opt_check_official_merchant": {
+              "label": "Open the e-commerce app where you bought the item to check tracking status",
+              "feedbackTitle": "Safe: Independent tracking verification",
+              "feedbackExplanation": "Checking your official order page proves whether the courier actually attempted delivery or if this message was random spam.",
+              "goldenRule": "Always check delivery status inside your original shopping app."
+            }
+          }
+        }
+      },
+      "upi_collect_request": {
+        "title": "Fake Refund / UPI Reverse Payment Collect Request",
+        "categoryLabel": "UPI Collect & QR Code Fraud",
+        "senderDisplay": "Shree Retailers (Fictional)",
+        "senderSubtitle": "UPI Collect Request",
+        "timestamp": "Today, 3:45 PM",
+        "segments": {
+          "seg_upi_collect_header": {
+            "text": "Payment Request from Shree Retailers (Fictional Merchant)."
+          },
+          "seg_amount_display": {
+            "text": "Requesting: ₹14,200. Account: your-bank-account@upi."
+          },
+          "seg_payer_note": {
+            "text": "Note from requester: 'Refund of excess payment. Enter UPI PIN to accept refund into your bank account.'",
+            "flagTitle": "The 'PIN to Receive Money' Myth",
+            "flagExplanation": "You NEVER enter a UPI PIN to receive money or refunds. UPI PIN is exclusively used to authorize deductions from your account.",
+            "flagHowToVerify": "Whenever money is credited to your bank account via UPI, it arrives automatically without any PIN or action required on your phone.",
+            "severity": "critical"
+          },
+          "seg_pin_demand_prompt": {
+            "text": "Tap 'Pay' and enter UPI PIN to claim ₹14,200 instantly.",
+            "flagTitle": "Collect Request Masquerading as Credit",
+            "flagExplanation": "This is a Collect Request (debit), not a credit. Entering your PIN transfers ₹14,200 immediately to the scammer's bank account.",
+            "flagHowToVerify": "Read the button carefully: If it says 'Pay' or asks for a PIN, money will LEAVE your account.",
+            "severity": "critical"
+          },
+          "seg_bank_warning_footer": {
+            "text": "Standard NPCI / Bank warning: Entering PIN will debit money from your account."
+          }
+        },
+        "simulation": {
+          "prompt": "A seller claims they accidentally overcharged you and sent this UPI request to return your money. What do you do?",
+          "options": {
+            "opt_enter_upi_pin": {
+              "label": "Click Pay and enter your 4-digit UPI PIN to claim the ₹14,200 refund",
+              "feedbackTitle": "Catastrophic: ₹14,200 instantly debited from your account",
+              "feedbackExplanation": "Entering your PIN authorized the transfer of ₹14,200 out of your account. UPI transactions cannot be reversed once authorized.",
+              "goldenRule": "You never enter a UPI PIN to receive money. UPI PIN is only for sending money."
+            },
+            "opt_decline_and_block": {
+              "label": "Decline the request, report the VPA handle, and block the requester",
+              "feedbackTitle": "Safe: Threat neutralized and reported",
+              "feedbackExplanation": "Declining the collect request prevents any money from leaving your account. Reporting the VPA alerts the payment app.",
+              "goldenRule": "Reject any collect request that claims to be a refund or prize."
+            },
+            "opt_chat_seller": {
+              "label": "Message the seller to ask why it says Pay instead of Receive",
+              "feedbackTitle": "Caution: Scammers will use social engineering",
+              "feedbackExplanation": "The scammer will reassure you with technical jargon ('The system requires authorization before credit'). Never negotiate.",
+              "goldenRule": "Do not argue with scammers; reject and report immediately."
+            }
+          }
+        }
+      },
+      "digital_arrest_notice": {
+        "title": "Digital Arrest / Fake Law Enforcement Video Call Notice",
+        "categoryLabel": "Digital Arrest & Impersonation",
+        "senderDisplay": "Central Telecom Operations Desk (Fictional Spoof)",
+        "senderSubtitle": "Video Interrogation Notice",
+        "timestamp": "Today, 10:05 AM",
+        "segments": {
+          "seg_official_seal_header": {
+            "text": "National Security Investigation Notice — High Priority Case #ND-8831."
+          },
+          "seg_arrest_warrant_claim": {
+            "text": "An arrest warrant has been issued in your name for illegal SIM cards linked to money laundering.",
+            "flagTitle": "Fabricated Arrest Warrant Over Messaging Apps",
+            "flagExplanation": "Law enforcement agencies, police, CBI, or telecom authorities NEVER issue arrest warrants or conduct investigations over WhatsApp or Skype.",
+            "flagHowToVerify": "Legitimate police investigations follow formal legal procedures with in-person notices, not video calls.",
+            "severity": "critical"
+          },
+          "seg_secrecy_order": {
+            "text": "You are placed under immediate 'Digital Arrest'. You are legally forbidden from telling family members or consulting a lawyer.",
+            "flagTitle": "The Fiction of 'Digital Arrest'",
+            "flagExplanation": "There is NO legal concept of 'Digital Arrest' under Indian law. It is an entirely manufactured phrase used by criminal syndicates.",
+            "flagHowToVerify": "Indian law requires physical presence, legal representation, and judicial magistrates. No law permits virtual custody.",
+            "severity": "critical"
+          },
+          "seg_camera_continuous_demand": {
+            "text": "Keep your camera switched on 24x7 without disconnecting, or police teams will be dispatched to your home.",
+            "flagTitle": "Psychological Isolation & Surveillance Trap",
+            "flagExplanation": "Demanding that you keep your camera on isolates you from loved ones and prevents you from making phone calls to verify the claim.",
+            "flagHowToVerify": "Disconnect immediately. No legitimate officer can compel you to remain on a personal video call.",
+            "severity": "critical"
+          },
+          "seg_clearance_deposit_prompt": {
+            "text": "Transfer your bank balances to the Supreme Court Security Clearance Account for temporary audit.",
+            "flagTitle": "The 'Clearance Account' Extortion",
+            "flagExplanation": "No court, police department, or government agency ever asks citizens to transfer funds to any 'verification account'.",
+            "flagHowToVerify": "Never transfer money to any account for 'clearance' or 'verification'.",
+            "severity": "critical"
+          }
+        },
+        "simulation": {
+          "prompt": "A caller dressed in a police uniform on video call claims an arrest warrant is pending against you and orders you to stay on camera. What do you do?",
+          "options": {
+            "opt_obey_video_transfer": {
+              "label": "Stay on camera and transfer your savings to the 'clearance account' to prove innocence",
+              "feedbackTitle": "Catastrophic: Lifelong savings lost to extortion syndicates",
+              "feedbackExplanation": "The criminals will continue demanding money until you have no funds left. Once transferred, recovering money is extremely difficult.",
+              "goldenRule": "Government agencies never ask for funds into 'verification accounts'."
+            },
+            "opt_disconnect_call_112": {
+              "label": "Disconnect the video call immediately, notify your family, and call 112 / 1930",
+              "feedbackTitle": "Safe: Breaking psychological control",
+              "feedbackExplanation": "Disconnecting breaks the psychological trance. Calling 112 connects you with real police, who will confirm the call was a fraud.",
+              "goldenRule": "'Digital Arrest' is completely fake. Disconnect immediately."
+            },
+            "opt_ask_for_id_card": {
+              "label": "Ask the caller to hold up their police ID card to the webcam",
+              "feedbackTitle": "Caution: Criminals use forged badges and fake police stations",
+              "feedbackExplanation": "Scammers have realistic fake police uniforms, forged ID cards, and studio backdrops with official emblems.",
+              "goldenRule": "Do not evaluate credentials shown on video calls. Disconnect."
+            }
+          }
+        }
+      }
+    },
+    "quiz": {
+      "q_electricity_sms": {
+        "context": "Utility Bill Threat",
+        "sender": "SMS from 10-digit mobile number",
+        "message": "Power will be cut at 9:30 PM tonight due to pending bill. Call 98765-43210 immediately to pay.",
+        "question": "What is the primary indicator that this message is fraudulent?",
+        "options": {
+          "opt_a": {
+            "text": "The message was sent in English rather than the state language",
+            "explanation": "Utility messages can be sent in English or regional languages; this is not the main red flag."
+          },
+          "opt_b": {
+            "text": "The bill amount was not specified in the text",
+            "explanation": "While bill amounts are usually specified, this is secondary."
+          },
+          "opt_c": {
+            "text": "Threatening a night-time power cut and giving a personal 10-digit mobile number",
+            "explanation": "State power companies do not cut power at night without written notice, and they never use personal 10-digit mobile numbers as helplines."
+          },
+          "opt_d": {
+            "text": "The message lacks an official logo image",
+            "explanation": "SMS messages cannot contain embedded logos."
+          }
+        },
+        "goldenRule": "Utility companies use official toll-free helplines (like 1912), never personal 10-digit phone numbers."
+      },
+      "q_courier_sms": {
+        "context": "Courier Delivery Link",
+        "sender": "SMS from unverified alphanumeric sender",
+        "message": "Your package IND98124 could not be delivered due to wrong address. Update address & pay ₹5: https://courier-update.fictional",
+        "question": "Why do scammers ask for a tiny payment of just ₹5?",
+        "options": {
+          "opt_a": {
+            "text": "Because they only want ₹5 from millions of victims",
+            "explanation": "The ₹5 is not their real target; their target is your full bank account."
+          },
+          "opt_b": {
+            "text": "The tiny fee feels harmless, but the fake payment gateway steals your complete card details and OTP",
+            "explanation": "You let down your guard for ₹5, but entering your card credentials allows scammers to steal thousands."
+          },
+          "opt_c": {
+            "text": "Because ₹5 is the legal government parcel re-delivery charge",
+            "explanation": "Couriers do not charge ₹5 via SMS links."
+          },
+          "opt_d": {
+            "text": "To verify that your mobile number has active SMS balance",
+            "explanation": "SMS balance is irrelevant to the scam mechanism."
+          }
+        },
+        "goldenRule": "Never enter banking or card details on links received via unsolicited SMS messages."
+      },
+      "q_upi_collect": {
+        "context": "UPI Payment Request",
+        "sender": "UPI Collect Request Notification",
+        "message": "Payment Request for ₹8,500 from Buyer. Note: Enter UPI PIN to claim your refund.",
+        "question": "When do you ever need to enter your UPI PIN to RECEIVE money into your bank account?",
+        "options": {
+          "opt_a": {
+            "text": "Only when receiving money from a new contact for the first time",
+            "explanation": "You NEVER enter a PIN to receive money, even from new contacts."
+          },
+          "opt_b": {
+            "text": "Only when accepting refunds from merchants or online platforms",
+            "explanation": "Refunds arrive automatically without requiring any PIN."
+          },
+          "opt_c": {
+            "text": "Only when the transaction amount is greater than ₹5,000",
+            "explanation": "The transaction amount does not change UPI mechanics."
+          },
+          "opt_d": {
+            "text": "NEVER. UPI PIN is exclusively used to SEND money or debit your account",
+            "explanation": "Money arrives in your account automatically. Entering your PIN always sends money OUT."
+          }
+        },
+        "goldenRule": "UPI PIN is ONLY for sending money. Receiving money NEVER requires a PIN."
+      },
+      "q_digital_arrest": {
+        "context": "Digital Arrest Extortion",
+        "sender": "Video Call claiming to be Police / Cyber Cell",
+        "message": "You are placed under 'Digital Arrest' for money laundering. You must remain on camera 24x7 and transfer money to an audit account.",
+        "question": "What is the legal reality of 'Digital Arrest' under Indian criminal law?",
+        "options": {
+          "opt_a": {
+            "text": "'Digital Arrest' does NOT exist in Indian law. Police and courts never interrogate citizens or demand money via video calls",
+            "explanation": "Under Indian law, arrests and investigations require physical legal procedures. 'Digital Arrest' is a complete fabrication."
+          },
+          "opt_b": {
+            "text": "It is a new legal provision introduced for cyber crime investigations",
+            "explanation": "There is no such legal provision. The Ministry of Home Affairs has explicitly warned against this fake concept."
+          },
+          "opt_c": {
+            "text": "It is legal only if the caller wears an official police uniform",
+            "explanation": "Criminals regularly wear counterfeit uniforms and use fake backdrops."
+          },
+          "opt_d": {
+            "text": "It is valid if they display a stamped court order on screen",
+            "explanation": "Scammers easily forge letters with fake seals and logos."
+          }
+        },
+        "goldenRule": "There is no such thing as 'Digital Arrest'. Disconnect video calls immediately and call 1930 / 112."
+      }
+    }
+  },
+  "scamLabMeta": {
+    "simulatorPromptSubtitle": "Select what you would do. Your choice will reveal the real-world consequence.",
+    "quizNextQuestion": "Next Question"
+  }
+}
