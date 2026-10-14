@@ -130,6 +130,19 @@
     "percentComplete": "{{percent}}% पूर्ण",
     "categoryUpi": "यूपीआई एवं क्यूआर",
     "categoryArrest": "डिजिटल अरेस्ट",
-    "categorySeniors": "वरिष्ठ सुरक्षा"
+    "categorySeniors": "वरिष्ठ सुरक्षा",
+    "minAbbr": "मिनट",
+    "nameInputPlaceholder": "उदा. रमेश कुलकर्णी / प्रिया शर्मा",
+    "certificateSubheader": "साइबर रक्षक नागरिक पहल",
+    "certificateTitleText": "नागरिक रक्षक प्रमाण पत्र",
+    "certificateAwardedTo": "यह गर्व से प्रदान किया जाता है",
+    "certificateReasonLine1": "डिजिटल वित्तीय धोखाधड़ी को पहचानने में उत्कृष्ट व्यावहारिक जागरूकता प्रदर्शित करने के लिए,",
+    "certificateReasonLine2": "यूपीआई कलेक्ट जाल से निपटने, वीडियो रंगदारी का सामना करने और परिवार के बुजुर्गों की रक्षा करने के लिए।",
+    "certificateDateLabel": "पूर्ण होने की तिथि",
+    "certificateHelplineLabel": "हेल्पलाइन संदर्भ",
+    "certificateHelplineValue": "राष्ट्रीय साइबर हेल्पलाइन 1930",
+    "certificateIdLabel": "प्रमाण पत्र आईडी",
+    "certificateVerificationLabel": "सत्यापन",
+    "certificateVerificationValue": "क्लाइंट-साइड प्रामाणिक"
   }
 }

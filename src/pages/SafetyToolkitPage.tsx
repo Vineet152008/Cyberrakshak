@@ -65,8 +65,8 @@ export const SafetyToolkitPage: React.FC = () => {
 
   const handleShare = async () => {
     const shareData = {
-      title: 'CyberRakshak — Citizen Cyber Safety Guide',
-      text: 'Verified Indian emergency helplines & family cyber defense guide: National Helpline 1930, Emergency 112, Electricity 1912.',
+      title: t('toolkit.shareTitle'),
+      text: t('toolkit.shareText'),
       url: window.location.href,
     };
 

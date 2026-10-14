@@ -8,7 +8,7 @@ Designed for first-time smartphone users, families, and senior citizens to recog
 
 ## ⚠️ Important Translation Notice
 > **Notice regarding Hindi (हिन्दी) & Marathi (मराठी) Translations:**
-> The Hindi (`hi`) and Marathi (`mr`) translations for Emergency Assist and educational content are machine-assisted translations and **require native speaker review and verification by cyber-legal authorities** before production deployment.
+> The Hindi (`hi`) and Marathi (`mr`) translations for Emergency Assist, Academy, Safety Toolkit, and educational content are machine-assisted translations and **needs native review / verification by cyber-legal authorities** before production deployment.
 
 ---
 

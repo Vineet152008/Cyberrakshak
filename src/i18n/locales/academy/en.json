@@ -130,6 +130,19 @@
     "percentComplete": "{{percent}}% Complete",
     "categoryUpi": "UPI & QR",
     "categoryArrest": "Digital Arrest",
-    "categorySeniors": "Senior Defense"
+    "categorySeniors": "Senior Defense",
+    "minAbbr": "min",
+    "nameInputPlaceholder": "e.g. Ramesh Kulkarni / Priya Sharma",
+    "certificateSubheader": "CYBERRAKSHAK PUBLIC CITIZEN INITIATIVE",
+    "certificateTitleText": "CITIZEN GUARDIAN CERTIFICATE",
+    "certificateAwardedTo": "This is proudly awarded to",
+    "certificateReasonLine1": "For demonstrating exemplary practical awareness in detecting digital financial deception,",
+    "certificateReasonLine2": "combating UPI collect traps, resisting video extortion threats, and safeguarding family elders.",
+    "certificateDateLabel": "Date of Completion",
+    "certificateHelplineLabel": "Helpline Reference",
+    "certificateHelplineValue": "National Cyber Helpline 1930",
+    "certificateIdLabel": "Certificate ID",
+    "certificateVerificationLabel": "Verification",
+    "certificateVerificationValue": "Client-Side Authenticated"
   }
 }

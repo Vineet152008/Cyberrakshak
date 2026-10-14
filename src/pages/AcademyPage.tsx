@@ -109,31 +109,31 @@ export const AcademyPage: React.FC = () => {
   <rect x="35" y="35" width="930" height="630" fill="none" stroke="rgba(201,169,110,0.3)" stroke-width="1" rx="12"/>
 
   <!-- Header Wordmark -->
-  <text x="500" y="110" font-family="serif" font-size="20" letter-spacing="4" fill="#C9A96E" text-anchor="middle" font-weight="600">CYBERRAKSHAK PUBLIC CITIZEN INITIATIVE</text>
-  <text x="500" y="170" font-family="serif" font-size="38" fill="#F8FAFC" text-anchor="middle" font-weight="bold">CITIZEN GUARDIAN CERTIFICATE</text>
+  <text x="500" y="110" font-family="serif" font-size="20" letter-spacing="4" fill="#C9A96E" text-anchor="middle" font-weight="600">${t('academy.certificateSubheader')}</text>
+  <text x="500" y="170" font-family="serif" font-size="38" fill="#F8FAFC" text-anchor="middle" font-weight="bold">${t('academy.certificateTitleText')}</text>
   
   <line x1="350" y1="200" x2="650" y2="200" stroke="#C9A96E" stroke-width="1.5" stroke-opacity="0.6"/>
 
-  <text x="500" y="250" font-family="sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">This is proudly awarded to</text>
+  <text x="500" y="250" font-family="sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">${t('academy.certificateAwardedTo')}</text>
   
   <!-- Recipient Name -->
   <text x="500" y="320" font-family="serif" font-size="44" fill="url(#gold)" text-anchor="middle" font-weight="bold">${displayName}</text>
   <line x1="300" y1="340" x2="700" y2="340" stroke="rgba(201,169,110,0.4)" stroke-width="1"/>
 
   <!-- Pledge Statement -->
-  <text x="500" y="400" font-family="sans-serif" font-size="16" fill="#CBD5E1" text-anchor="middle">For demonstrating exemplary practical awareness in detecting digital financial deception,</text>
-  <text x="500" y="430" font-family="sans-serif" font-size="16" fill="#CBD5E1" text-anchor="middle">combating UPI collect traps, resisting video extortion threats, and safeguarding family elders.</text>
+  <text x="500" y="400" font-family="sans-serif" font-size="16" fill="#CBD5E1" text-anchor="middle">${t('academy.certificateReasonLine1')}</text>
+  <text x="500" y="430" font-family="sans-serif" font-size="16" fill="#CBD5E1" text-anchor="middle">${t('academy.certificateReasonLine2')}</text>
 
   <!-- Seal / Emblem -->
   <circle cx="500" cy="520" r="42" fill="#131B2E" stroke="#C9A96E" stroke-width="2"/>
   <polygon points="500,490 512,518 542,518 518,534 527,562 500,544 473,562 482,534 458,518 488,518" fill="#C9A96E"/>
 
   <!-- Footer Verification -->
-  <text x="120" y="600" font-family="sans-serif" font-size="13" fill="#64748B">Date of Completion: <tspan fill="#F8FAFC">${dateStr}</tspan></text>
-  <text x="120" y="625" font-family="sans-serif" font-size="13" fill="#64748B">Helpline Reference: <tspan fill="#F8FAFC">National Cyber Helpline 1930</tspan></text>
+  <text x="120" y="600" font-family="sans-serif" font-size="13" fill="#64748B">${t('academy.certificateDateLabel')}: <tspan fill="#F8FAFC">${dateStr}</tspan></text>
+  <text x="120" y="625" font-family="sans-serif" font-size="13" fill="#64748B">${t('academy.certificateHelplineLabel')}: <tspan fill="#F8FAFC">${t('academy.certificateHelplineValue')}</tspan></text>
   
-  <text x="880" y="600" font-family="sans-serif" font-size="13" fill="#64748B" text-anchor="end">Certificate ID: <tspan fill="#F8FAFC">${certId}</tspan></text>
-  <text x="880" y="625" font-family="sans-serif" font-size="13" fill="#64748B" text-anchor="end">Verification: <tspan fill="#10B981">Client-Side Authenticated</tspan></text>
+  <text x="880" y="600" font-family="sans-serif" font-size="13" fill="#64748B" text-anchor="end">${t('academy.certificateIdLabel')}: <tspan fill="#F8FAFC">${certId}</tspan></text>
+  <text x="880" y="625" font-family="sans-serif" font-size="13" fill="#64748B" text-anchor="end">${t('academy.certificateVerificationLabel')}: <tspan fill="#10B981">${t('academy.certificateVerificationValue')}</tspan></text>
 </svg>`;
 
     const blob = new Blob([svgContent], { type: 'image/svg+xml;charset=utf-8' });
@@ -271,7 +271,7 @@ export const AcademyPage: React.FC = () => {
                   <div className="flex items-center justify-between gap-2 mb-3 text-xs text-[#94A3B8]">
                     <div className="flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5 text-[#C9A96E]" aria-hidden="true" />
-                      <span>{formatNumberLatn(lesson.durationMinutes)} {'min'}</span>
+                      <span>{formatNumberLatn(lesson.durationMinutes)} {t('academy.minAbbr')}</span>
                     </div>
 
                     {isCompleted ? (
@@ -473,7 +473,7 @@ export const AcademyPage: React.FC = () => {
                 type="text"
                 value={learnerName}
                 onChange={(e) => setLearnerName(e.target.value)}
-                placeholder="e.g. Ramesh Kulkarni / Priya Sharma"
+                placeholder={t('academy.nameInputPlaceholder')}
                 className="w-full px-4 py-2.5 rounded-xl bg-[#131B2E] border border-[rgba(201,169,110,0.3)] text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#C9A96E]"
               />
             </div>
