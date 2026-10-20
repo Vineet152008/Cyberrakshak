@@ -79,6 +79,13 @@ const coreFallbacks = {
       subtitle: "Paste a suspicious SMS, WhatsApp text, or email to inspect for common deception cues before you tap, call, or reply.",
       analyzeButton: "Inspect Message",
     },
+    academy: {
+      closeModal: "Close",
+    },
+    toolkit: {
+      triageSelectPrompt: "What is the caller or sender claiming?",
+      triageActionTitle: "Immediate Action Required",
+    },
   },
   hi: {
     emergency: {
@@ -102,6 +109,13 @@ const coreFallbacks = {
       subtitle: "संदेहास्पद एसएमएस, व्हाट्सएप संदेश या ईमेल को यहाँ पेस्ट करें और क्लिक करने या कॉल करने से पहले छुपे हुए लाल झंडों की जांच करें।",
       analyzeButton: "संदेश की जांच करें",
     },
+    academy: {
+      closeModal: "बंद करें",
+    },
+    toolkit: {
+      triageSelectPrompt: "फोन करने वाला या संदेश भेजने वाला क्या दावा कर रहा है?",
+      triageActionTitle: "तत्काल आवश्यक कदम",
+    },
   },
   mr: {
     emergency: {
@@ -124,6 +138,13 @@ const coreFallbacks = {
       badge: "नियम-आधारित ऑफलाइन तपासणी",
       subtitle: "संशयास्पद एसएमएस, व्हॉट्सॲप मेसेज किंवा ईमेल येथे पेस्ट करा आणि क्लिक करण्यापूर्वी किंवा कॉल करण्यापूर्वी फसवणुकीचे संकेत तपासा.",
       analyzeButton: "मेसेज तपासा",
+    },
+    academy: {
+      closeModal: "बंद करा",
+    },
+    toolkit: {
+      triageSelectPrompt: "फोन करणारा किंवा मेसेज पाठवणारा काय दावा करत आहे?",
+      triageActionTitle: "तातडीने आवश्यक कृती",
     },
   },
 };

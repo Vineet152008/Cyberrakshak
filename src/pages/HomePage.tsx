@@ -7,11 +7,13 @@ import { QuickActionStrip } from '../components/home/QuickActionStrip';
 import { MagneticButton } from '../components/pointer/MagneticButton';
 import { TiltCard } from '../components/pointer/TiltCard';
 import { SCAM_PROFILES } from '../data/scams';
-import { AlertTriangle, ArrowRight, CheckCircle2, PhoneCall, Lock } from 'lucide-react';
+import { ScamProfile } from '../types/content';
+import { AlertTriangle, ArrowRight, CheckCircle2, PhoneCall, Lock, X, ShieldAlert } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const { t } = useTranslation();
-  const [selectedThreat, setSelectedThreat] = useState(SCAM_PROFILES[0]);
+  const [selectedThreat, setSelectedThreat] = useState<ScamProfile>(SCAM_PROFILES[0]);
+  const [activeGuideScam, setActiveGuideScam] = useState<ScamProfile | null>(null);
 
   return (
     <div className="relative overflow-hidden">
@@ -111,10 +113,13 @@ export const HomePage: React.FC = () => {
               return (
                 <TiltCard
                   key={scam.id}
-                  className={`flex flex-col justify-between cursor-pointer transition-all ${
+                  className={`flex flex-col justify-between cursor-pointer transition-all hover:border-[rgba(201,169,110,0.4)] ${
                     isSelected ? 'ring-1 ring-[#C9A96E] bg-[#131B2E]' : ''
                   }`}
-                  onClick={() => setSelectedThreat(scam)}
+                  onClick={() => {
+                    setSelectedThreat(scam);
+                    setActiveGuideScam(scam);
+                  }}
                 >
                   <div>
                     <div className="flex items-center gap-2 text-xs text-[#94A3B8] mb-2.5">
@@ -136,9 +141,17 @@ export const HomePage: React.FC = () => {
 
                   <div className="pt-3 border-t border-[rgba(201,169,110,0.12)] flex items-center justify-between text-xs">
                     <span className="text-[#94A3B8] font-mono">{t('home.atlasHowItWorks')}</span>
-                    <span className="text-[#C9A96E] font-medium group-hover:underline">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedThreat(scam);
+                        setActiveGuideScam(scam);
+                      }}
+                      className="text-[#C9A96E] hover:text-[#E4D1A8] font-medium hover:underline cursor-pointer focus-visible:outline-[#C9A96E]"
+                    >
                       {t('home.atlasViewGuide')}
-                    </span>
+                    </button>
                   </div>
                 </TiltCard>
               );
@@ -181,6 +194,110 @@ export const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
+
+      {/* Interactive Threat Guide Modal */}
+      {activeGuideScam && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="threat-guide-modal-title"
+          className="fixed inset-0 z-50 bg-[#070B14]/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
+        >
+          <div className="relative w-full max-w-2xl bg-[#0D1322] border border-[rgba(201,169,110,0.35)] rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl my-8">
+            {/* Modal Header */}
+            <div className="flex items-start justify-between gap-4 border-b border-[rgba(201,169,110,0.18)] pb-4">
+              <div>
+                <div className="flex items-center gap-2 text-xs text-[#94A3B8] mb-1">
+                  <span
+                    className="font-bold uppercase tracking-wider text-[11px]"
+                    style={{ color: activeGuideScam.threatSeverity === 'critical' ? '#F43F5E' : '#C9A96E' }}
+                  >
+                    {activeGuideScam.threatSeverity.toUpperCase()}
+                  </span>
+                  <span aria-hidden="true">&middot;</span>
+                  <span>{activeGuideScam.fictionalSample.channel}</span>
+                </div>
+                <h2 id="threat-guide-modal-title" className="text-2xl font-display font-bold text-[#F8FAFC]">
+                  {t(activeGuideScam.titleKey)}
+                </h2>
+              </div>
+
+              <button
+                onClick={() => setActiveGuideScam(null)}
+                className="p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#131B2E] transition-colors cursor-pointer"
+                aria-label={t('common.closeModal')}
+              >
+                <X className="w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+
+            {/* Fictional Sample Message Box */}
+            <div className="p-4 rounded-xl bg-[#070B14] border border-[rgba(201,169,110,0.2)] space-y-2">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#94A3B8]">
+                <span>{t('home.atlasBadge')} ({activeGuideScam.fictionalSample.channel})</span>
+                <span className="text-[#F43F5E] font-semibold">{t(activeGuideScam.fictionalSample.senderKey)}</span>
+              </div>
+              <p className="text-xs sm:text-sm text-[#CBD5E1] font-mono leading-relaxed bg-[#131B2E] p-3 rounded-lg border border-[rgba(255,255,255,0.05)]">
+                "{t(activeGuideScam.fictionalSample.textKey)}"
+              </p>
+            </div>
+
+            {/* How It Works & Deceptive Mechanism */}
+            <div className="space-y-2">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#C9A96E]">
+                {t('home.atlasHowItWorks')}
+              </h3>
+              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
+                {t(activeGuideScam.howItWorksKey)}
+              </p>
+            </div>
+
+            {/* Deceptive Hooks */}
+            <div className="space-y-1.5 text-xs sm:text-sm text-[#CBD5E1]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8] block">
+                {t('home.atlasTriggersTitle')}
+              </span>
+              <p className="leading-relaxed bg-[#131B2E] p-3 rounded-lg border border-[rgba(255,255,255,0.05)] text-[#CBD5E1]">
+                {t(activeGuideScam.hooksKey)}
+              </p>
+            </div>
+
+            {/* Golden Rule Callout Box */}
+            <div className="p-4 rounded-xl border border-[rgba(201,169,110,0.3)] bg-[rgba(201,169,110,0.08)] text-[#E4D1A8] text-xs sm:text-sm font-semibold leading-relaxed flex items-start gap-2.5">
+              <ShieldAlert className="w-5 h-5 text-[#C9A96E] shrink-0 mt-0.5" aria-hidden="true" />
+              <div>{t(activeGuideScam.goldenRuleKey)}</div>
+            </div>
+
+            {/* Immediate Action Protocol */}
+            <div className="space-y-2 pt-2 border-t border-[rgba(201,169,110,0.15)]">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#10B981]">
+                {t('home.atlasProtocolTitle')}
+              </h3>
+              <p className="text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
+                {t(activeGuideScam.immediateActionKey)}
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 pt-4 border-t border-[rgba(201,169,110,0.18)]">
+              <Link
+                to="/scam-lab"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#C9A96E] hover:bg-[#E4D1A8] text-[#070B14] font-bold text-xs sm:text-sm transition-colors cursor-pointer"
+              >
+                <span>{t('home.atlasPracticeCta')}</span>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+              <button
+                type="button"
+                onClick={() => setActiveGuideScam(null)}
+                className="px-5 py-2.5 rounded-xl bg-[#131B2E] hover:bg-[#1E293B] text-[#F8FAFC] font-semibold text-xs sm:text-sm border border-[rgba(255,255,255,0.08)] transition-colors cursor-pointer"
+              >
+                {t('common.closeModal')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

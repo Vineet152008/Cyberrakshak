@@ -171,6 +171,9 @@
       "checkerCta": "Inspect Message"
     },
     "footerCall1930": "1930 (Toll Free, 24x7)",
-    "footerCall112": "112 (Police / Emergency)"
+    "footerCall112": "112 (Police / Emergency)",
+    "atlasTriggersTitle": "Common Deceptive Triggers",
+    "atlasProtocolTitle": "Immediate Safety Protocol",
+    "closeModal": "Close"
   }
 }

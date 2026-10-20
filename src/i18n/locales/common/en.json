@@ -63,6 +63,7 @@
     "calmModeOff": "Turn on Calm Mode",
     "calmModeDesc": "Removes motion, glows, and animations to keep the screen quiet and easy to read.",
     "call1930": "1930 (Toll Free, 24x7)",
-    "call112": "112 (Police / Emergency)"
+    "call112": "112 (Police / Emergency)",
+    "closeModal": "Close"
   }
 }
